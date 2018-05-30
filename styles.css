@@ -1,0 +1,108 @@
+body {
+  margin: 1em auto;
+  max-width: 40em;
+  padding: 0 0.62em;
+  font: 1.4em/1.4 'Fira Sans', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  background-image: linear-gradient(to right, rgba(131, 48, 255, 1) 0%, rgba(131, 198, 255, 1) 100%);
+  color: white;
+  line-height: 1;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: -2rem;
+  margin-bottom: -0.4rem;
+}
+
+ul {
+  list-style: none;
+  margin-left: -2rem;
+  padding-left: 3rem;
+  text-indent: -3rem;
+  columns: 2 20em;
+}
+
+
+li {
+  page-break-inside: avoid;
+  break-inside: avoid;
+  margin-left: 0;
+  padding-left: 3.5rem;
+  list-style: none;
+  transition: all 0.5s ease;
+}
+
+li:hover {
+  margin-left: 1rem;
+  list-style: disclosure-closed;
+  transition: all 0.5s ease;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  display: inline;
+  background-image: linear-gradient(to right, rgba(131, 48, 255, 0.25) 0%, rgba(131, 198, 255, 0.25) 100%);
+  background-position: 0 1.0em;
+  background-repeat: repeat-x;
+  background-size: 100% 2px;
+  text-shadow:
+   -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+   -1px  1px 0 #fff,
+    1px  1px 0 #fff;
+  transition: background 0.5s ease;
+}
+
+a:hover {
+  background-position: 0;
+  background-image: linear-gradient(to right, rgba(131, 48, 255, .35) 0%, rgba(131, 198, 255, .35) 100%);
+  background-size: 100% 100%;
+  text-shadow: none;
+  transition: background 0.25s ease;
+}
+
+.cnum {
+  display: inline-block;
+  min-width: 4rem;
+  padding-right: 0.6rem;
+  font-variant: small-caps;
+  font-size: 70%;
+  text-align: right;
+}
+
+.clnum {
+  display: inline-block;
+  min-width: 2.5rem;
+  padding-right: 0.2rem;
+  font-variant: small-caps;
+  font-size: 70%;
+  text-align: right;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    background: rgba(45, 61, 61, 1);
+    color: #fff;
+}
+::selection {
+    text-shadow: none;
+    background: rgba(45, 61, 61, 1);
+    color: #fff;
+}
+
+@media print {
+  body {
+    max-width: none
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+    body { max-width: 60em; }
+}
