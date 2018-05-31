@@ -46,21 +46,12 @@ def follow_redirects(url):
 
 def get_class_paths(url):
     tag = 'h3'
-    path_map = lambda x: re.findall(r'\d+\.\d+', x.contents[0])
-    title_map = lambda x: x.contents[0]
+    path_map = lambda x: re.findall(r'\d+\.\d+', x)
     response = session.get(url, headers=headers)
     content = BeautifulSoup(response.content, parser)
     tags = content.find_all(tag)
-    try:
-        paths = [path_map(x) for x in tags]
-    except TypeError as e:
-        print(f'{e}')
-        print('tags =')
-        [print(x) for x in tags]
-        [print(x.contents) for x in tags]
-        [print(x.contents[0]) for x in tags]
-        paths = []
-    titles = [title_map(x) for x in tags]
+    titles = [x.contents[0] for x in tags if isinstance(x.contents[0], str)]
+    paths = [path_map(x) for x in titles]
     linklets = []
     for i, path in enumerate(paths):
         if path != []:

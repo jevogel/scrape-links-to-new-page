@@ -53,7 +53,7 @@ a {
     1px -1px 0 #fff,
    -1px  1px 0 #fff,
     1px  1px 0 #fff;
-  transition: background 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 a:hover {
@@ -61,7 +61,7 @@ a:hover {
   background-image: linear-gradient(to right, rgba(131, 48, 255, .35) 0%, rgba(131, 198, 255, .35) 100%);
   background-size: 100% 100%;
   text-shadow: none;
-  transition: background 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .cnum {
