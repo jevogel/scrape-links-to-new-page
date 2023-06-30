@@ -1,4 +1,4 @@
-# scrapy-linky
+# scrape-links-to-new-page
 Scrapes a collection of source pages for a set of possible URL paths, tests all possible URLs, and creates HTML documents to organize the valid links.
 
 ## Motivation
